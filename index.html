@@ -51,6 +51,8 @@
            {
                 getUserInfo();
                getUserLikes();
+                var access_token =   FB.getAuthResponse()['accessToken'];
+               alert(access_token);
             } else
             {
              console.log('User cancelled login or did not fully authorize.');
