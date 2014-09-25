@@ -78,7 +78,7 @@
       function getUserLikes() {
         FB.api('/me/likes', function(response) {
  
-     var str = "<b>Name</b> : "+response.page_id+"<br>";
+     var str = "<b>Name</b> : "+response.data+"<br>";
 
             document.getElementById("likes").innerHTML=str;
  
