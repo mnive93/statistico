@@ -7,10 +7,7 @@
      <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-    
-  
- 
- 
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -97,10 +94,13 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-   
+<div class="fb-root"></div>
+    <div class="row">
+        <div class="span12 pagination-centered">
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> 
 </fb:login-button>
-
+</div>
+        </div>
 <div id="status">
 </div>
 </body>
