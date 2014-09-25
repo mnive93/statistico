@@ -79,7 +79,7 @@
         FB.api('/me/likes', function(response) {
  
      var str = "<b>Name</b> : "+response.page_id+"<br>";
-          str + = response.toString();
+
             document.getElementById("likes").innerHTML=str;
  
     });
