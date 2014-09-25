@@ -3,8 +3,24 @@
 <head>
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+<li><a class="brand" href="index.html">Statistico</a></li>
+
+                    
+
+                </ul>
+            </div>
+        </div>
+    </div>
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -92,11 +108,11 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> Login with facebook
 </fb:login-button>
 
 <div id="status">
 </div>
-
+</div>
 </body>
 </html>
