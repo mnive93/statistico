@@ -1,10 +1,54 @@
-body
+.intro
 {
-    background-color:#FFE760;
+    
+    background: url('../img/bg.jpg') no-repeat;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+   background-position: center;
+     background-color:#FFE760;
 }
-.vertical-center:before {    /* create a full-height inline block pseudo=element */
-  content: " ";
-  display: inline-block;
-  vertical-align: middle;    /* vertical alignment of the inline element */
-  height: 100%;
+.overlay
+{
+   
+    
+}
+.wrapper
+{
+    margin-top: 300px;
+}
+/* Navigation bar style */
+
+.navbar{
+    background-image: none;
+    filter: none;
+    background: #000000;
+    opacity: 0.8;
+}
+
+.navbar-inner{
+    background-image: none;
+    filter: none;
+    background:#000000;
+    height: 60px;
+    border: none;
+}
+
+.navbar .nav > li > a{
+    color: #fff;
+    text-shadow: none;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+	
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.btn
+{
+    width:250px;
+    height: 50px;
 }
