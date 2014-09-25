@@ -77,7 +77,7 @@
         FB.api('/me/likes', function(response) {
  
      var str = String(response);
-          document.getElementById("status").innerHTML=str;
+          document.getElementById("likes").innerHTML=str;
  
     });
     }
@@ -127,6 +127,9 @@
 <br/><br/><br/><br/><br/>
  
 <div id="message">
+
+</div>
+    <div id="likes">
 
 </div>
  
