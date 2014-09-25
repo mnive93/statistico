@@ -51,11 +51,12 @@
            if (response.authResponse)
            {
                 getUserInfo();
+               getUserLikes();
             } else
             {
              console.log('User cancelled login or did not fully authorize.');
             }
-         },{scope: 'email,user_photos,user_videos'});
+         },{scope: 'email,user_photos,user_likes'});
  
     }
  
@@ -69,6 +70,14 @@
           str +="<b>Email:</b> "+response.email+"<br>";
           str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
           str +="<input type='button' value='Logout' onclick='Logout();'/>";
+          document.getElementById("status").innerHTML=str;
+ 
+    });
+    }
+      function getUserLikes() {
+        FB.api('/me/likes', function(response) {
+ 
+     var str = response;
           document.getElementById("status").innerHTML=str;
  
     });
