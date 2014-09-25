@@ -76,7 +76,7 @@
       function getUserLikes() {
         FB.api('/me/likes', function(response) {
  
-     var str = response.toString();
+     var str = response.total_count;
           document.getElementById("likes").innerHTML=str;
  
     });
