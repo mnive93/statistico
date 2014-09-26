@@ -62,8 +62,8 @@
 function getUserLikes() {
         FB.api('/me/likes', function(response) {
  
-        var str = JSON.parse(response);
-        var data = str.data;
+        
+        var data = response.data;
             for(var i in data)
             {
                 var category = data[i].category;
