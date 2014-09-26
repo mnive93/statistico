@@ -1,11 +1,12 @@
  window.fbAsyncInit = function() {
     FB.init({
-      appId      : '342183615957574', // Set YOUR APP ID
+      appId      : '113455642165175', // Set YOUR APP ID
+      channelUrl : 'http://hayageek.com/examples/oauth/facebook/oauth-javascript/channel.html', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });
-    
+ 
     FB.Event.subscribe('auth.authResponseChange', function(response)
     {
      if (response.status === 'connected')
@@ -36,14 +37,12 @@
            if (response.authResponse)
            {
                 getUserInfo();
-               getUserLikes();
-                var access_token =   FB.getAuthResponse()['accessToken'];
-               console.log(access_token);
+                getUserLikes();
             } else
             {
              console.log('User cancelled login or did not fully authorize.');
             }
-         },{scope: 'email,user_photos,user_likes'});
+         },{scope: 'email,user_photos,user_videos'});
  
     }
  
@@ -61,13 +60,20 @@
  
     });
     }
-      function getUserLikes() {
+function getUserInfo() {
         FB.api('/me/likes', function(response) {
  
-     var str = JSON.parse(response);
-
-            document.getElementById("likes").innerHTML=str;
+        var str = JSON.parse(response);
+        var data = str.data;
+            for(var i in data)
+            {
+                var category = data[i].category;
+                var name = data[i].name;
+                var id = data[i].id;
+                document.getElementById("likes").innerHTML=category+name+id+"<br/>";
  
+            }
+          
     });
     }
     function getPhoto()
