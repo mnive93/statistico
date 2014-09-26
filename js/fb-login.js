@@ -62,14 +62,13 @@
 function getUserLikes() {
         FB.api('/me/likes', function(response) {
  
-        
         var data = response.data;
             for(var i in data)
             {
                 var category = data[i].category;
                 var name = data[i].name;
                 var id = data[i].id;
-                document.getElementById("likes").innerHTML=category+name+id+"<br/>";
+                document.getElementById("likes").innerHTML+=category+name+id+"<br/>";
  
             }
           
