@@ -1,5 +1,4 @@
-<script>
-  window.fbAsyncInit = function() {
+ window.fbAsyncInit = function() {
     FB.init({
       appId      : '342183615957574', // Set YOUR APP ID
       status     : true, // check login status
@@ -95,4 +94,3 @@
      ref.parentNode.insertBefore(js, ref);
    }(document));
  
-</script>
