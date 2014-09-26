@@ -83,7 +83,7 @@ function getUserLikes() {
             names = map[key];
               for(var n in names)
               {
-               document.getElementById("likes").innerHTML+="<br/>"+n+"<br/>"
+               document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>"
               }
           }
     });
