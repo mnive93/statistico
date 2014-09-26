@@ -59,7 +59,7 @@
  
     });
     }
-function getUserInfo() {
+function getUserLikes() {
         FB.api('/me/likes', function(response) {
  
         var str = JSON.parse(response);
