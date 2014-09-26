@@ -41,7 +41,7 @@
             {
              console.log('User cancelled login or did not fully authorize.');
             }
-         },{scope: 'email,user_photos,user_videos'});
+         },{scope: 'email,user_photos,user_likes'});
  
     }
  
