@@ -63,15 +63,29 @@ function getUserLikes() {
         FB.api('/me/likes', function(response) {
  
         var data = response.data;
+            map = {};
+            
             for(var i in data)
             {
                 var category = data[i].category;
                 var name = data[i].name;
                 var id = data[i].id;
-                document.getElementById("likes").innerHTML+=category+name+id+"<br/>";
+                if(category in map)
+                    map[category].push(name);
+                else
+                    map[category] = [name];
+              
  
             }
-          
+          for (var key in map)
+          {
+            document.getElementById("likes").innerHTML+="<br/>"+key+<"br/">;
+            names = [map[key]];
+              for(var n in names)
+              {
+               document.getElementById("likes").innerHTML+="<br/>"+n+<"br/">
+              }
+          }
     });
     }
     function getPhoto()
