@@ -60,7 +60,7 @@
     });
     }
 function getUserLikes() {
-        FB.api('/me/likes', function(response) {
+        FB.api('/me/likes?limit=200', function(response) {
  
         var data = response.data;
             map = {};
@@ -69,7 +69,7 @@ function getUserLikes() {
             {
                 var category = data[i].category;
                 var name = data[i].name;
-                var id = data[i].id;
+              
                 if(category in map)
                     map[category].push(name);
                 else
@@ -77,17 +77,22 @@ function getUserLikes() {
               
  
             }
-          for (var key in map)
+            printData(map);
+         
+    });
+    }
+function printData(var map)
+{
+     for (var key in map)
           {
             document.getElementById("likes").innerHTML+="<br/>"+key+"<br/>";
             names = map[key];
               for(var n in names)
               {
-               document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>"
+               document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>";
               }
           }
-    });
-    }
+}
     function getPhoto()
     {
       FB.api('/me/picture?type=normal', function(response) {
