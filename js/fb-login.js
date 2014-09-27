@@ -81,7 +81,7 @@ function getUserLikes() {
          
     });
     }
-function printData(var map)
+function printData(map)
 {
      for (var key in map)
           {
