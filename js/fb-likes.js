@@ -7,16 +7,16 @@
     });
       FB.Event.subscribe('auth.login', function(response) {
                     // do something with response
-                   getUserLikes();
+                  
                 });
                 FB.Event.subscribe('auth.logout', function(response) {
                     // do something with response
                    Logout();
                 });
  FB.getLoginStatus(function(response) {
-                    if (response.session) {
-                        // logged in and connected user, someone you know
-                       getUserLikes();
+                  if(response.status === 'connected')
+                  {                        // logged in and connected user, someone you know
+                       getUserInfo();
                     }
                 });
     };
@@ -38,8 +38,7 @@
     }
 function getUserLikes() {
         FB.api('/me/likes?limit=200', function(response) {
-    if(response.status =="connected") 
-    {
+  
         var data = response.data;
             map = {};
             
@@ -56,7 +55,7 @@ function getUserLikes() {
  
             }
         printData(map);
-    }
+    
     });
         
     }
