@@ -35,13 +35,13 @@
         FB.login(function(response) {
            if (response.authResponse)
            {
-                getUserInfo();
+                //getUserInfo();
                 getUserLikes();
             } else
             {
              console.log('User cancelled login or did not fully authorize.');
             }
-         },{scope: 'email,user_photos,user_likes'});
+         },{scope: 'email,user_photos,user_likes',redirect_uri:'http://mnive93.github.io/statistico/likes.html'} );
  
     }
  
