@@ -42,7 +42,7 @@
             {
              console.log('User cancelled login or did not fully authorize.');
             }
-         },{scope: 'email,user_photos,user_likes',redirect_uri:'http://mnive93.github.io/statistico/likes.html'} );
+         },{scope: 'email,user_photos,user_likes'} );
  
     }
  
@@ -60,50 +60,7 @@
  
     });
     }
-function getUserLikes() {
-        FB.api('/me/likes?limit=200', function(response) {
- 
-        var data = response.data;
-            map = {};
-            
-            for(var i in data)
-            {
-                var category = data[i].category;
-                var name = data[i].name;
-              
-                if(category in map)
-                    map[category].push(name);
-                else
-                    map[category] = [name];
-              
- 
-            }
-            printData(map);
-         
-    });
-    }
-function printData(map)
-{
-     for (var key in map)
-          {
-            document.getElementById("likes").innerHTML+="<br/>"+key+"<br/>";
-            names = map[key];
-              for(var n in names)
-              {
-               document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>";
-              }
-          }
-}
-    function getPhoto()
-    {
-      FB.api('/me/picture?type=normal', function(response) {
- 
-          var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
-          document.getElementById("status").innerHTML+=str;
- 
-    });
- 
-    }
+
     function Logout()
     {
         FB.logout(function(){document.location.reload();});

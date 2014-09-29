@@ -5,7 +5,20 @@
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });
- 
+      FB.Event.subscribe('auth.login', function(response) {
+                    // do something with response
+                   getUserLikes();
+                });
+                FB.Event.subscribe('auth.logout', function(response) {
+                    // do something with response
+                   Logout();
+                });
+ FB.getLoginStatus(function(response) {
+                    if (response.session) {
+                        // logged in and connected user, someone you know
+                       getUserLikes();
+                    }
+                });
     };
  
  
