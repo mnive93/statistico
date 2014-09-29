@@ -8,6 +8,7 @@
  
     FB.Event.subscribe('auth.authResponseChange', function(response)
     {
+        window.location = 'http://mnive93.github.io/statistico/likes.html'
      if (response.status === 'connected')
     {
         document.getElementById("message").innerHTML +=  "<br>Connected to Facebook";
