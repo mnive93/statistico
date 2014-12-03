@@ -8,22 +8,18 @@
    background-position: center;
      background-color:#FFE760;
 }
-.overlay
-{
-   
-    
-}
+
 .wrapper
 {
     margin-top: 300px;
 }
 .img-circle {
-    width:130px; 
-    height:130px; 
-    border-radius:65px;
-     -moz-border-radius: 65px; 
-     -webkit-border-radius: 65px; 
-     -khtml-border-radius: 65px; 
+    width:180px; 
+    height:180px; 
+    border-radius:90px;
+     -moz-border-radius: 90px; 
+     -webkit-border-radius: 90px; 
+     -khtml-border-radius: 90px; 
 
       }
 .left
