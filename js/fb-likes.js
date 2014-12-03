@@ -37,7 +37,7 @@
     });
     }
 function getUserLikes() {
-        FB.api('/me/likes?limit=200', function(response) {
+        FB.api('/me/likes?limit=500', function(response) {
   
         var data = response.data;
             map = {};
@@ -57,7 +57,7 @@ function getUserLikes() {
               
  
             }
-         map =    sortData(map);
+         map = sortData(map);
         printData(map);
         
     });
@@ -65,8 +65,10 @@ function getUserLikes() {
     }
 function sortData(map)
 {
+    console.log(map[i].length)
     for (var i=0;i<map.length;i++)
     {
+         console.log(map[i].length);
         for(var j=i+1;j<map.length-i;j++)
         {
             if(map[i].length < map[j].length)
