@@ -95,18 +95,19 @@ function printData(map)
     
      for (var key in map)
           {
-            document.getElementById("likes").innerHTML+="<br/><b>"+key+"</b><br/>";
+          //  document.getElementById("likes").innerHTML+="<br/><b>"+key+"</b><br/>";
             names = map[key];
             names.length
             d["x:"] = key;
             d["y:"] = names.length;
             
-            document.getElementById("likes").innerHTML+="<br/><b>"+names.length+"</b><br/>";
-              for(var n in names)
-              {
-               document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>";
-              }
+         //   document.getElementById("likes").innerHTML+="<br/><b>"+names.length+"</b><br/>";
+           //   for(var n in names)
+             // {
+            //   document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>";
+        //      }
           }
+    console.log(d.toString());
  var data = {
   "xScale": "ordinal",
   "yScale": "linear",
@@ -118,8 +119,8 @@ function printData(map)
   }
 ]
      
-    }
- console.log(data.toString());
+    },
+ 
     var myChart = new xChart('bar', data, '#myChart');
     
     
