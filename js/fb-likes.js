@@ -118,7 +118,7 @@ function printData(map)
   }
 ]
     }
- alert(data);
+ alert(String(data));
 }
 
     function getPhoto()
