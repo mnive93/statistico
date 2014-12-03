@@ -28,8 +28,18 @@
 }
 .detail
 {
-    margin-top:50px;
+    margin-top:80px;
     margin-bottom: 50px;
+}
+.namedetail
+{
+    margin-top:180px;
+    margin-bottom: 50px;
+}
+h3
+{
+    color:#000000;
+    font-size: 18px;
 }
 /* Navigation bar style */
 
