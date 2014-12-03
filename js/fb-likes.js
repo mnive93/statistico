@@ -91,16 +91,19 @@ function sortData(map,count)
 function printData(map)
 {
    
-    var d = new Array();
+    var d = [];
     
      for (var key in map)
           {
+              var obj = {};
+              
           //  document.getElementById("likes").innerHTML+="<br/><b>"+key+"</b><br/>";
             names = map[key];
             names.length
-            d["x:"] = key;
-            d["y:"] = names.length;
-            
+           
+            obj["x"] = key;
+            obj["y"] = names.length;
+            d.push(obj);
          //   document.getElementById("likes").innerHTML+="<br/><b>"+names.length+"</b><br/>";
            //   for(var n in names)
              // {
@@ -114,7 +117,7 @@ function printData(map)
   "type": "bar",
   "main": [{
   "classname": ".statistico",
-    "data":[d]
+    "data":d
       
   }
 ]
