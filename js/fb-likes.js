@@ -15,7 +15,8 @@
                 });
  FB.getLoginStatus(function(response) {
                   if(response.status === 'connected')
-                  {      getPhoto();                  // logged in and connected user, someone you know
+                  {   getUserInfo();   
+                      getPhoto();                  // logged in and connected user, someone you know
                        getUserLikes();
                     }
                 });
