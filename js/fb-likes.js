@@ -69,7 +69,7 @@ function getUserLikes() {
     }
 function sortData(map,count)
 {
-    console.log(map[i].length)
+    
     for (var i=0;i<count;i++)
     {
         
