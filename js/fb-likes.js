@@ -98,7 +98,7 @@ function printData(map)
           }
     
  var data = {
-  "xScale": "linear",
+  "xScale": "ordinal",
   "yScale": "linear",
   "type": "bar",
   "main": [{
