@@ -41,6 +41,7 @@ function getUserLikes() {
   
         var data = response.data;
             map = {};
+            var count =0;
            
             
             for(var i in data)
@@ -49,7 +50,10 @@ function getUserLikes() {
                 var name = data[i].name;
               
                 if(category in map)
+                {
                     map[category].push(name);
+                    count+=1;
+                }
                     
                 else
                     map[category] = [name];
@@ -57,21 +61,21 @@ function getUserLikes() {
               
  
             }
-         map = sortData(map);
+         map = sortData(map,count);
         printData(map);
         
     });
         
     }
-function sortData(map)
+function sortData(map,count)
 {
     console.log(map[i].length)
-    for (var i=0;i<map.length;i++)
+    for (var i=0;i<count;i++)
     {
         
         n1 = map[i];
          console.log(n1.length);
-        for(var j=i+1;j<map.length-i;j++)
+        for(var j=i+1;j<count-i;j++)
         {
             n2 = map[j];
             if(n1.length < n2.length)
