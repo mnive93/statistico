@@ -26,7 +26,8 @@
         FB.api('/me', function(response) {
          var str ="<h3>"+response.name+"</h3>";
          document.getElementById("name").innerHTML+="Hello "+str+"!";
-        }
+        });
+ }
 function getUserLikes() {
         FB.api('/me/likes?limit=200', function(response) {
   
