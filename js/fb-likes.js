@@ -61,7 +61,7 @@ function getUserLikes() {
               
  
             }
-         map = sortData(map,count);
+        
         printData(map);
         
     });
@@ -90,19 +90,37 @@ function sortData(map,count)
 }
 function printData(map)
 {
+   
+    var d = new Array();
     
      for (var key in map)
           {
             document.getElementById("likes").innerHTML+="<br/><b>"+key+"</b><br/>";
             names = map[key];
             names.length
+            d["x:"] = key;
+            d["y:"] = names.length;
+            
             document.getElementById("likes").innerHTML+="<br/><b>"+names.length+"</b><br/>";
               for(var n in names)
               {
                document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>";
               }
           }
+ var data = {
+  "xScale": "ordinal",
+  "yScale": "linear",
+  "type": "bar",
+  "main": [{
+  "classname": ".statistico",
+    "data":[d]
+      
+  }
+]
+    }
+ alert(data);
 }
+
     function getPhoto()
     {
       FB.api('/me/picture?type=normal', function(response) {
