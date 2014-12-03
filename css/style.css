@@ -18,12 +18,12 @@
     margin-top: 300px;
 }
 .img-circle {
-    width:100px; 
-    height:100px; 
-    border-radius:60px;
-     -moz-border-radius: 60px; 
-     -webkit-border-radius: 60px; 
-     -khtml-border-radius: 60px; 
+    width:130px; 
+    height:130px; 
+    border-radius:65px;
+     -moz-border-radius: 65px; 
+     -webkit-border-radius: 65px; 
+     -khtml-border-radius: 65px; 
 
       }
 .left
