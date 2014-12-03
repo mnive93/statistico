@@ -117,8 +117,12 @@ function printData(map)
       
   }
 ]
+     
     }
  console.log(data.toString());
+    var myChart = new xChart('bar', data, '#myChart');
+    
+    
 }
 
     function getPhoto()
