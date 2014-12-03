@@ -43,6 +43,10 @@ h3
 {
     color:#000000;
     font-size: 40px;
+    -moz-hyphens:auto; 
+    -webkit-hyphens:auto; 
+    -o-hyphens:auto; 
+    hyphens:auto; 
 }
 /* Navigation bar style */
 
