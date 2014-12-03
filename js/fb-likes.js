@@ -15,7 +15,7 @@
                 });
  FB.getLoginStatus(function(response) {
                   if(response.status === 'connected')
-                  {                        // logged in and connected user, someone you know
+                  {      getPhoto();                  // logged in and connected user, someone you know
                        getUserLikes();
                     }
                 });
@@ -119,8 +119,8 @@ function printData(map)
     {
       FB.api('/me/picture?type=normal', function(response) {
  
-          var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
-          document.getElementById("status").innerHTML+=str;
+          var str="<img src='"+response.data.url+"' class='img-circle'/>";
+          document.getElementById("userImage").innerHTML+=str;
  
     });
  
