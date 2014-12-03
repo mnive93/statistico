@@ -92,8 +92,7 @@ function printData(map)
             obj["x"] = key;
             obj["y"] = names.length;
             d.push(obj);
-               console.log(key);
-               console.log(names.length);
+              
            }
       
           }
