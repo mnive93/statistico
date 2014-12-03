@@ -87,7 +87,7 @@ function printData(map)
         
             names = map[key];
             names.length
-           if(names.length >2)
+           if(names.length >3)
            {
             obj["x"] = key;
             obj["y"] = names.length;
