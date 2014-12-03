@@ -25,8 +25,8 @@
  
  function getUserInfo() {
         FB.api('/me', function(response) {
-         var str ="<h3>"+response.name+"</h3>";
-         document.getElementById("name").innerHTML+="Hello "+str+"!";
+         var str ="<h3> Hello"+response.name+"!</h3>";
+         document.getElementById("name").innerHTML+=str;
         });
  }
 function getUserLikes() {
