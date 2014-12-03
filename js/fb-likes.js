@@ -68,10 +68,13 @@ function sortData(map)
     console.log(map[i].length)
     for (var i=0;i<map.length;i++)
     {
-         console.log(map[i].length);
+        
+        n1 = map[i];
+         console.log(n1.length);
         for(var j=i+1;j<map.length-i;j++)
         {
-            if(map[i].length < map[j].length)
+            n2 = map[j];
+            if(n1.length < n2.length)
             {
                 var temp = map[i];
                 map[i] = map[j];
