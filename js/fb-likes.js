@@ -120,7 +120,7 @@ function printData(map)
       FB.api('/me/picture?type=normal', function(response) {
  
           var str="<img src='"+response.data.url+"' class='img-circle'/>";
-          document.getElementById("userImage").innerHTML+=str;
+          document.getElementById("status").innerHTML=str;
  
     });
  
