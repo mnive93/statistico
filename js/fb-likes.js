@@ -119,7 +119,7 @@ function printData(map)
   }
 ]
      
-    },
+    };
  
     var myChart = new xChart('bar', data, '#myChart');
     
