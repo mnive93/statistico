@@ -37,7 +37,7 @@
     });
     }
 function getUserLikes() {
-        FB.api('/me/likes?limit=500', function(response) {
+        FB.api('/me/likes?limit=200', function(response) {
   
         var data = response.data;
             map = {};
