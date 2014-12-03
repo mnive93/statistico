@@ -22,20 +22,7 @@
     };
  
  
-  function getUserInfo() {
-        FB.api('/me', function(response) {
  
-      var str="<b>Name</b> : "+response.name+"<br>";
-          str +="<b>Link: </b>"+response.link+"<br>";
-          str +="<b>Username:</b> "+response.username+"<br>";
-          str +="<b>id: </b>"+response.id+"<br>";
-          str +="<b>Email:</b> "+response.email+"<br>";
-          str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
-          str +="<input type='button' value='Logout' onclick='Logout();'/>";
-          document.getElementById("status").innerHTML=str;
- 
-    });
-    }
 function getUserLikes() {
         FB.api('/me/likes?limit=200', function(response) {
   
@@ -97,18 +84,16 @@ function printData(map)
           {
               var obj = {};
               
-          //  document.getElementById("likes").innerHTML+="<br/><b>"+key+"</b><br/>";
+        
             names = map[key];
             names.length
-           
+           if(names.length >2)
+           {
             obj["x"] = key;
             obj["y"] = names.length;
             d.push(obj);
-         //   document.getElementById("likes").innerHTML+="<br/><b>"+names.length+"</b><br/>";
-           //   for(var n in names)
-             // {
-            //   document.getElementById("likes").innerHTML+="<br/>"+map[key][n]+"<br/>";
-        //      }
+           }
+      
           }
     console.log(d.toString());
  var data = {
