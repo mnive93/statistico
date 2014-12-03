@@ -118,7 +118,7 @@ function printData(map)
   }
 ]
     }
- alert(String(data));
+ console.log(data.toString());
 }
 
     function getPhoto()
