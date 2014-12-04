@@ -36,7 +36,7 @@
         FB.login(function(response) {
            if (response.authResponse)
            {
-               console.log("here);
+               console.log("here");
                 //getUserInfo();
                 getUserLikes();
             } else
