@@ -48,6 +48,10 @@ h3
     -o-hyphens:auto; 
     hyphens:auto; 
 }
+#myChart
+{
+    margin-left: 50px;
+}
 /* Navigation bar style */
 
 .navbar{
